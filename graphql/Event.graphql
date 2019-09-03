@@ -1,0 +1,9 @@
+# Tech event
+type Event {
+  id: ID!
+  isFree: Boolean
+  name: String
+  cityId: String
+  startDate: DateTime
+  endDate: DateTime
+}
