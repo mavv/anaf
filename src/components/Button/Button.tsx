@@ -1,13 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { ReactEventHandler } from 'react';
 import styled from 'styled-components';
 
-interface ButtonProps {
-  htmlType: string;
-  type: string;
+interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
+  htmlType?: string;
 }
 
-const Button = styled.button`
+const StyledButton = styled.button`
   display: inline-flex;
   justify-content: center;
   flex-shrink: 0;
@@ -29,5 +27,7 @@ const Button = styled.button`
 
   max-width: 300px;
 `;
+
+const Button: React.FC<ButtonProps> = props => <StyledButton {...props} />;
 
 export default Button;
